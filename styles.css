@@ -70,8 +70,22 @@ body {
 .question img {
     width: 100%;
     margin: 15px 0;
+    padding: 10px;
 }
 
+.option {
+    padding-bottom: 10px;
+    border: 1px;
+    /* border-style: solid; */
+    border-style: hidden;
+    border-color: lightgrey;
+}
+
+.option p {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;    
+}
 
 
 
