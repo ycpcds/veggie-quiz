@@ -64,8 +64,27 @@ function submitAllAnswers() {
         alert("Please answer all of the questions!")
     } /* If all questions have been answered, redirect to the results page */
     else {
-        window.location.href="result.html";
+        let total = 0;
+        for (x in answers) {
+            if (answers[x]=='a') {
+                total = total+1;
+            } else if (answers[x]=='b') {
+                total = total+2;
+            } else if (answers[x]=='c') {
+                total = total+3;
+            } else if (answers[x]=='d') {
+                total = total+4;
+            }
+        }
+        if (total >= 0 && total <= 12) {
+            window.location.href="result1.html";
+        } else if (total >= 13 && total <= 24) {
+            window.location.href="result2.html";
+        } else if (total >=25 && total <= 36) {
+            window.location.href="result3.html";
+        } else {
+            window.location.href="result_default.html";
+        }
     }
 }
-
 

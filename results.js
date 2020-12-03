@@ -1,7 +1,9 @@
+
+
 function displayResults() {
-    if (already_answered.length != 8) {
+/*     if (already_answered.length != 8) {
         showResult("res_default");
-    } else {
+    } else { */
         let total = 0;
         for (x in answers) {
             if (answers[x]=='a') {
@@ -24,7 +26,7 @@ function displayResults() {
             showResult("res_default");
         }
     }
-}
+/* } */
 
 
 function showResult(res_id) {
