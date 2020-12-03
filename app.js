@@ -14,8 +14,9 @@ let answers = {
     q6 : null,
     q7 : null,
     q8 : null
-};
+}; 
 
+let already_answered = Object.keys(answers).filter(function(key) {return answers[key] != null});
 
 function finalAns(opt) {
     let ans = opt.slice(-1);
@@ -61,9 +62,10 @@ function submitAllAnswers() {
     let already_answered = Object.keys(answers).filter(function(key) {return answers[key] != null});
     if (already_answered.length != 8) {
         alert("Please answer all of the questions!")
-        return false
     } /* If all questions have been answered, redirect to the results page */
     else {
-        window.location.href="result.html"
+        window.location.href="result.html";
     }
 }
+
+
